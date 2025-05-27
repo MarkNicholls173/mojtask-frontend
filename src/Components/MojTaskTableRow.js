@@ -3,12 +3,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { DateFormatter } from "../utils";
 import axios from "axios";
-
-function DateFormatter(DateString) {
-    var mydate = new Date(DateString);
-    return mydate.toDateString();
-}
 
 const MojTaskTableRow =
     (props) => {
