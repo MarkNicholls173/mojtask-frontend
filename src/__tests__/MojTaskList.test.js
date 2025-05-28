@@ -23,6 +23,6 @@ test('renders MojTaskList headings', async () => {
     axios.get.mock.ResolvedValue({ data: dummyTaskList})
     render(<MojTaskList />);
     await expect(screen.getByText(/Task Name/i)).toBeInTheDocument();
-    // expect(screen.getByText(/Status/i)).toBeInTheDocument();
+    await expect(screen.getByText(/Status/i)).toBeInTheDocument();
 });
     

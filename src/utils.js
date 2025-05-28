@@ -1,4 +1,9 @@
 export function DateFormatter(DateString) {
-    var mydate = new Date(DateString);
+    try {
+        var mydate = new Date(DateString);
+        
+    } catch (err) {
+        return "Invalid Date";
+    }
     return mydate.toDateString();
 }

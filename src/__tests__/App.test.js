@@ -7,10 +7,3 @@ test('render app', () => {
     const pageTitle = screen.getByText(/Moj Tasks App/i);
     expect(pageTitle).toBeInTheDocument();
 })
-
-
-test('fake pass test', () => {
-    expect(true).toBeTruthy();
-});
-
-

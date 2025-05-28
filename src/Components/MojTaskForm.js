@@ -18,7 +18,6 @@ const MojTaskForm = (props) => {
             taskStatus: Yup.string().required("Please enter a status"),
             taskDueDate: Yup.date().required("Please select a date"),
         });
-    console.log(props);
     return (
         <div className="form-wrapper">
             <Formik {...props}
