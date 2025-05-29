@@ -15,7 +15,7 @@ const MojTaskTableRow =
             taskDueDate
         } = props.obj;
 
-        const deleteStudent = () => {
+        const deleteTask = () => {
             axios
                 .delete(
 "http://localhost:5021/api/mojtasks/" + taskId)
@@ -41,7 +41,7 @@ const MojTaskTableRow =
                         Edit
                     </Link>
                     <Button
-                        onClick={deleteStudent}
+                        onClick={deleteTask}
                         size="sm" variant="danger">
                         Delete
                     </Button>

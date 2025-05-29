@@ -35,7 +35,7 @@ const CreateMojTask = () => {
                 .catch(err => alert('Something went wrong'))
         }
 
-    // Return student form
+    // Return MojTask form
     return (
         <MojTaskForm initialValues={formValues}
             onSubmit={onSubmit}
@@ -45,5 +45,5 @@ const CreateMojTask = () => {
     )
 }
 
-// Export CreateStudent Component
+// Export CreateMOjTask Component
 export default CreateMojTask

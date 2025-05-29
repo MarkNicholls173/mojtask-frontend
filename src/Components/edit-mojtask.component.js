@@ -29,20 +29,19 @@ const EditMojTask = (props) => {
         );
 
     //onSubmit handler
-    const onSubmit = (studentObject) => {
+    const onSubmit = (formObject) => {
         
 
         axios
             .put(
 "http://localhost:5021/api/mojtasks/" +
                 params.id,
-                studentObject
+                formObject
             )
             .then((res) => {
                 if (res.status === 200) {
                     alert("Task successfully updated");
                     navigate("/mojtask-list");
-                    //props.history.push("/mojtask-list");
                 } else Promise.reject();
             })
             .catch(
@@ -51,7 +50,7 @@ const EditMojTask = (props) => {
             );
     };
 
-    // Load data from server and reinitialize student form
+    // Load data from server and reinitialize task form
     useEffect(() => {
         axios
             .get(
@@ -77,7 +76,7 @@ const EditMojTask = (props) => {
             );
     }, []);
 
-    // Return student form
+    // Return task form
     return (
         <MojTaskForm
             initialValues={formValues}
